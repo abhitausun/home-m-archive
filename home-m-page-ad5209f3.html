@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 乐鱼体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f9f6f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2e2b26;
+            line-height: 1.7;
+            padding: 0 1.2rem;
+        }
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.8rem 0 3rem 0;
+        }
+
+        /* 导航 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0.8rem 0 1.2rem 0;
+            border-bottom: 1px solid #e3ddd4;
+            margin-bottom: 2.2rem;
+        }
+        .nav-brand {
+            font-weight: 600;
+            font-size: 1.35rem;
+            letter-spacing: 0.5px;
+            color: #3f3a33;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #5f5850;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #1f1b16;
+        }
+
+        /* 文章排版 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.6rem;
+            color: #26221d;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 2rem 0 0.8rem 0;
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid #dad2c5;
+            color: #2f2a24;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.4rem 0;
+            color: #3d3730;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* 引用块 / 提示框 */
+        .notice-box {
+            background: #efeae1;
+            border-left: 5px solid #b8a48b;
+            padding: 1rem 1.4rem;
+            margin: 1.8rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+        }
+        .notice-box strong {
+            color: #3f362b;
+        }
+
+        .tip-card {
+            background: #ffffffec;
+            border: 1px solid #dbd2c6;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.4rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .tip-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 三个场景卡片 (flex) */
+        .scenes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.6rem 0 0.8rem 0;
+        }
+        .scene-item {
+            flex: 1 1 200px;
+            background: #ffffffec;
+            border: 1px solid #ddd5ca;
+            border-radius: 16px;
+            padding: 1.3rem 1.2rem;
+            transition: box-shadow 0.2s;
+        }
+        .scene-item:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+        }
+        .scene-item h4 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #3d352c;
+        }
+        .scene-item p {
+            font-size: 0.9rem;
+            color: #4f473e;
+            margin-bottom: 0;
+        }
+
+        /* 常见说明摘要 */
+        .faq-mini {
+            margin: 1.8rem 0;
+        }
+        .faq-mini dt {
+            font-weight: 500;
+            margin: 1rem 0 0.2rem 0;
+            color: #3d362e;
+        }
+        .faq-mini dd {
+            margin-left: 0.2rem;
+            color: #4e473f;
+            border-left: 3px solid #d6cdbf;
+            padding-left: 1rem;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2d9ce;
+            margin: 2.2rem 0 1rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 0 0.8rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .scenes-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 导航 -->
+    <nav>
+        <span class="nav-brand">📋 简明指南</span>
+        <div class="nav-links">
+            <a href="#brief">介绍</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">说明</a>
+        </div>
+    </nav>
+
+    <!-- 核心介绍 -->
+    <h1>乐鱼体育 · 访问与使用指引</h1>
+    <p>这是一份整理过的介绍页，围绕 <a href="https://home-m-leyu.com.cn">乐鱼体育</a> 提供基础的访问参考和场景说明。内容力求平实、克制，不包含跳转诱导或夸大的功能描述，仅作为了解其服务方向的辅助材料。</p>
+
+    <div class="notice-box">
+        <strong>💡 访问提醒：</strong> 建议通过稳定网络环境访问，并留意浏览器地址栏的域名信息。如果页面加载异常，可稍后重试或检查本地设置。适用于 <a href="https://home-m-leyu.com.cn">乐鱼体育</a> 的一般访问场景。
+    </div>
+
+    <!-- 三个场景模块 -->
+    <h2 id="scenes">常见使用场景</h2>
+    <div class="scenes-grid">
+        <div class="scene-item">
+            <h4>📱 移动端浏览</h4>
+            <p>通过手机浏览器直接打开，页面会根据屏幕自适应调整排版。适合碎片时间快速查看信息。</p>
+        </div>
+        <div class="scene-item">
+            <h4>💻 桌面端查阅</h4>
+            <p>在电脑上使用主流浏览器（Chrome、Edge、Safari 等）可获得更完整的布局与导航体验。</p>
+        </div>
+        <div class="scene-item">
+            <h4>🔍 信息确认</h4>
+            <p>用于核对活动说明、规则描述或服务范围。建议同时参考官方渠道的最新公告。</p>
+        </div>
+    </div>
+
+    <!-- 简明指南段落 + 引用 -->
+    <h2>作为参考页的说明</h2>
+    <p>本页不替代 <a href="https://home-m-leyu.com.cn">乐鱼体育</a> 自身的官方文档，而是从“如何顺畅了解内容”的角度整理了一些观察。如果你正在寻找具体的功能入口或活动细则，直接访问原站通常是更可靠的路径。</p>
+
+    <div class="tip-card">
+        <p><strong>📌 保持信息对称</strong><br>
+        网络服务随时可能更新界面或调整规则。本页内容仅反映编写时的一般情况，不构成对服务完整性或可用性的承诺。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 id="faq">常见说明摘要</h2>
+    <dl class="faq-mini">
+        <dt>▸ 是否需要注册才能使用？</dt>
+        <dd>多数内容支持浏览，但部分个性化功能（如收藏、订阅）可能需要注册账户。具体请以站内提示为准。</dd>
+
+        <dt>▸ 页面加载速度受哪些因素影响？</dt>
+        <dd>网络连接质量、浏览器缓存、以及访问时段均可能影响体验。建议保持浏览器为较新版本。</dd>
+
+        <dt>▸ 如何确认我访问的是否为正确站点？</dt>
+        <dd>核对浏览器地址栏的域名是否为 <code>home-m-leyu.com.cn</code>，并注意页面底部的版权或备案信息（若有）。</dd>
+    </dl>
+
+    <!-- 额外提示块 -->
+    <div class="notice-box" style="border-left-color: #a28d76;">
+        <strong>🧾 使用前注意：</strong> 如果你是通过第三方链接到达本页，请再次确认你希望前往的站点。始终通过可信任的入口访问 <a href="https://home-m-leyu.com.cn">乐鱼体育</a>，以降低信息偏差风险。
+    </div>
+
+    <hr>
+    <p style="font-size: 0.85rem; color: #7d7369; text-align: center; margin-top: 0.5rem;">
+        内容整理 · 仅作参考 · 实际以官方发布为准
+    </p>
+</div>
+</body>
+</html>
