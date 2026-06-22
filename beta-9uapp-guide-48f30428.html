@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游app · 聚合乐趣</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f7f9;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1f1f2e;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+            padding: 3.5rem 2.5rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .page {
+                padding: 2.2rem 1.5rem;
+                border-radius: 24px;
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #8b8ba0;
+            background: #f0f0f4;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            margin-bottom: 1.8rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 650;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+            color: #12121c;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #5f5f72;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            border-left: 3px solid #d4d4de;
+            padding-left: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+            color: #2e2e3d;
+            margin-bottom: 2.2rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.1rem;
+        }
+
+        .intro-text strong {
+            font-weight: 600;
+            color: #1a1a28;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 2.5rem 0 2.2rem;
+            border-top: 1px solid #ecedf0;
+            padding-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            background: #e9eaf0;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #3b3b50;
+            margin-top: 0.2rem;
+            font-weight: 500;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #12121c;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-desc {
+            font-size: 0.94rem;
+            color: #4a4a5e;
+        }
+
+        .outro {
+            background: #f5f5f9;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0 0.8rem;
+        }
+
+        .outro p {
+            font-size: 0.96rem;
+            color: #2a2a3b;
+        }
+
+        .outro a {
+            color: #2b2b45;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b0b0c2;
+            font-weight: 500;
+            transition: text-decoration-color 0.2s, color 0.2s;
+        }
+
+        .outro a:hover {
+            text-decoration-color: #1f1f2e;
+            color: #000;
+        }
+
+        .faq-note {
+            margin-top: 2.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ecedf0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            font-size: 0.88rem;
+            color: #6a6a7c;
+        }
+
+        .faq-note span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .faq-note .label {
+            font-weight: 500;
+            color: #2d2d3f;
+            min-width: 3.8rem;
+        }
+
+        .footnote {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #9d9dad;
+            text-align: center;
+        }
+
+        /* 窄屏微调 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subhead {
+                font-size: 1rem;
+                padding-left: 0.8rem;
+            }
+            .outro {
+                padding: 1.3rem 1.2rem;
+            }
+            .feature-item {
+                gap: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero-tag">· 聚合 · 轻量 · 直觉</div>
+        <h1>从一款应用<br>到一种习惯</h1>
+        <div class="subhead">故事往往从一个简单的念头开始。</div>
+
+        <div class="intro-text">
+            <p>几年前，游戏爱好者们发现一个现象：手机上装满了各种独立 App，却很难找到一处既能发现新内容、又能快速回归老游戏的落脚点。就在这样的背景下，<strong>九游app</strong> 逐渐成型——不是做另一个大而全的平台，而是试着成为那个“刚好够用”的随身伙伴。</p>
+            <p>它的设计思路很朴素：去掉冗余的装饰，把核心留给内容本身。从热门新作到经典冷门，从攻略备忘到社区轻互动，所有功能都围绕“打开即用、不打扰”的原则展开。没有弹窗浮层，没有强制推送，只保留那些真正被需要的东西。</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">◆</div>
+                <div class="feature-content">
+                    <div class="feature-title">轻量化的内容结构</div>
+                    <div class="feature-desc">信息以简洁卡片呈现，分类克制，搜索直达。每个推荐都带有简短说明，而非堆砌标签。</div>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">◇</div>
+                <div class="feature-content">
+                    <div class="feature-title">场景化的引导</div>
+                    <div class="feature-desc">无论你在等待、通勤还是睡前，首页会根据时段与习惯微调展示，让发现变得自然。</div>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">○</div>
+                <div class="feature-content">
+                    <div class="feature-title">克制的社区交互</div>
+                    <div class="feature-desc">不追求即时通讯式的热闹，而是以异步留言、长评与收藏列表为主，沉淀更有价值的讨论。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outro">
+            <p>就像一本反复翻阅的笔记本，<a href="https://beta-9uapp.com">九游app</a> 不会大声喧哗，但会在你需要时安静地递上想要的东西。它不承诺改变你的游戏习惯，只希望成为你手机里一个可靠的存在——不抢眼，但顺手。</p>
+        </div>
+
+        <div class="faq-note">
+            <span><span class="label">适用</span> iOS · Android Web</span>
+            <span><span class="label">特点</span> 无广告 · 低数据</span>
+            <span><span class="label">迭代</span> 月更 · 社区驱动</span>
+        </div>
+
+        <div class="footnote">
+            从一条笔记到一份日常 · 九游app
+        </div>
+    </div>
+</body>
+</html>
